@@ -128,23 +128,24 @@ int main(void) {
     set_grid(old_grid, DEAD);
     set_grid(new_grid, DEAD);
     
+    // The R-pentomino (Centered around 50, 20)
+    //set_cell(old_grid, 50, 20, ALIVE);
+    //set_cell(old_grid, 50, 21, ALIVE);
+    //set_cell(old_grid, 49, 21, ALIVE);
+    //set_cell(old_grid, 50, 19, ALIVE);
+    //set_cell(old_grid, 51, 20, ALIVE);
 
-    set_cell(old_grid, 25, 8, ALIVE);
-    set_cell(old_grid, 24, 8, ALIVE);
-
-    set_cell(old_grid, 25, 9, ALIVE);
-    set_cell(old_grid, 26, 9, ALIVE);
-    set_cell(old_grid, 27, 9, ALIVE);
-    set_cell(old_grid, 28, 9, ALIVE);
-
-    set_cell(old_grid, 25, 7, ALIVE);
-    set_cell(old_grid, 25, 7, ALIVE);
-    set_cell(old_grid, 23, 10, ALIVE);
-    set_cell(old_grid, 24, 10, ALIVE);
-    set_cell(old_grid, 25, 10, ALIVE);
-    set_cell(old_grid, 26, 10, ALIVE);
-    set_cell(old_grid, 27, 10, ALIVE);
-  
+// Gosper Glider Gun (Start at 10, 10)
+int x = 10, y = 10;
+set_cell(old_grid, x+24, y+0, ALIVE);
+set_cell(old_grid, x+22, y+1, ALIVE); set_cell(old_grid, x+24, y+1, ALIVE);
+set_cell(old_grid, x+12, y+2, ALIVE); set_cell(old_grid, x+13, y+2, ALIVE); set_cell(old_grid, x+20, y+2, ALIVE); set_cell(old_grid, x+21, y+2, ALIVE); set_cell(old_grid, x+34, y+2, ALIVE); set_cell(old_grid, x+35, y+2, ALIVE);
+set_cell(old_grid, x+11, y+3, ALIVE); set_cell(old_grid, x+15, y+3, ALIVE); set_cell(old_grid, x+20, y+3, ALIVE); set_cell(old_grid, x+21, y+3, ALIVE); set_cell(old_grid, x+34, y+3, ALIVE); set_cell(old_grid, x+35, y+3, ALIVE);
+set_cell(old_grid, x+0,  y+4, ALIVE); set_cell(old_grid, x+1,  y+4, ALIVE); set_cell(old_grid, x+10, y+4, ALIVE); set_cell(old_grid, x+16, y+4, ALIVE); set_cell(old_grid, x+20, y+4, ALIVE); set_cell(old_grid, x+21, y+4, ALIVE);
+set_cell(old_grid, x+0,  y+5, ALIVE); set_cell(old_grid, x+1,  y+5, ALIVE); set_cell(old_grid, x+10, y+5, ALIVE); set_cell(old_grid, x+14, y+5, ALIVE); set_cell(old_grid, x+16, y+5, ALIVE); set_cell(old_grid, x+17, y+5, ALIVE); set_cell(old_grid, x+22, y+5, ALIVE); set_cell(old_grid, x+24, y+5, ALIVE);
+set_cell(old_grid, x+10, y+6, ALIVE); set_cell(old_grid, x+16, y+6, ALIVE); set_cell(old_grid, x+24, y+6, ALIVE);
+set_cell(old_grid, x+11, y+7, ALIVE); set_cell(old_grid, x+15, y+7, ALIVE);
+set_cell(old_grid, x+12, y+8, ALIVE); set_cell(old_grid, x+13, y+8, ALIVE);
     
     pop = get_population(old_grid);
     print_grid(old_grid, gen, pop);
